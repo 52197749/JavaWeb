@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+    <welcome-file-list>
+        <welcome-file>login.jsp</welcome-file>
+    </welcome-file-list>
+
+    <!--部署servlet到tomcat服务器-->
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>com.yjl.servlet.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <!--给servlet添加一个映射路径，浏览器可以通过这个映射路径访问该servlet-->
+        <url-pattern>/login</url-pattern>
+    </servlet-mapping>
+
+    <!--宠物主人的servlet-->
+    <servlet>
+        <servlet-name>PetOwnerServelt</servlet-name>
+        <servlet-class>com.yjl.servlet.PetOwnerServelt</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PetOwnerServelt</servlet-name>
+        <!--给servlet添加一个映射路径，浏览器可以通过这个映射路径访问该servlet-->
+        <url-pattern>/petOwner</url-pattern>
+    </servlet-mapping>
+</web-app>
